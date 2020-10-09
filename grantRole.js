@@ -1,3 +1,3 @@
 admin = db.getSiblingDB("admin")
 
-admin.grantRolesToUser( "cristian", [ "root" , { role: "root", db: "admin" } ] )
+admin.grantRolesToUser( "max", [ "root" , { role: "root", db: "admin" } ] )
