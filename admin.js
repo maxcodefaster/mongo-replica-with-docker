@@ -1,18 +1,20 @@
+// admin.js
 admin = db.getSiblingDB("admin")
+// creation of the admin user
 admin.createUser(
   {
-    user: "cristian",
-    pwd: "cristianPassword2017",
+    user: "max",
+    pwd: "maxPassword2020",
     roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
   }
 )
-
-db.getSiblingDB("admin").auth("cristian", "cristianPassword2017" )
-
+// let's authenticate to create the other user
+db.getSiblingDB("admin").auth("max", "maxPassword2020" )
+// creation of the replica set admin user
 db.getSiblingDB("admin").createUser(
   {
     "user" : "replicaAdmin",
-    "pwd" : "replicaAdminPassword2017",
+    "pwd" : "replicaAdminPassword2020",
     roles: [ { "role" : "clusterAdmin", "db" : "admin" } ]
   }
 )
